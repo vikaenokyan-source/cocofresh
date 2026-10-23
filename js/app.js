@@ -45,7 +45,7 @@
   /* ---------- позиции сцены по секциям ---------- */
   const POSES = {
     desktop: { hero: ['0vw', '6vh', 1], right: ['24vw', '2vh', .84], left: ['-24vw', '2vh', .84] },
-    mobile:  { hero: ['0vw', '-10svh', .92], right: ['0vw', '-21svh', .9], left: ['0vw', '-21svh', .9] },
+    mobile:  { hero: ['0vw', '-8svh', .9], right: ['0vw', '-21svh', .9], left: ['0vw', '-21svh', .9] },
   };
   const pose = $('#stagePose');
   function setPose(name) {

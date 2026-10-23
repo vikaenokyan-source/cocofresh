@@ -434,9 +434,10 @@ dd { margin: 0; font: 500 14px var(--mono); }
   .hdr .btn--sm { display: none; }
   .steps { display: none; }
 
-  .hero { display: block; padding-top: 92px; padding-bottom: 48px; }
-  .hero__bottom { margin-top: 50svh; padding: 22px; margin-left: -6px; margin-right: -6px; border-radius: 24px; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  .hero__mark { top: 15svh; font-size: 21vw; }
+  .hero { display: flex; flex-direction: column; justify-content: flex-start; padding-top: 92px; padding-bottom: 48px; }
+  .hero__bottom { order: 2; margin-top: 42svh; padding: 22px; margin-left: -6px; margin-right: -6px; border-radius: 24px; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  /* на телефоне логотип — отдельной строкой во всю ширину, над тарелкой */
+  .hero__mark { order: 1; position: relative; top: auto; left: auto; right: auto; margin: 34px 0 0; font-size: calc((100vw - 2 * var(--gutter)) / 5.95); transform: none !important; }
   .hero__top { flex-direction: column; gap: 8px; }
   .hero__bottom { flex-direction: column; align-items: stretch; gap: 22px; }
   .hero__copy, .hero__cta { max-width: none; }
