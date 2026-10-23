@@ -84,9 +84,14 @@
   const stagePar = $('#stagePar');
   const hdr = $('#hdr');
   let lastY = -1;
+  // параллакс сцены: цель считается по активному блоку и на границе блоков скачет,
+  // поэтому сама сцена не прыгает к цели, а плавно догоняет её
+  let parTarget = 0, parY = 0, lastT = 0;
 
-  function frame() {
+  function frame(t = 0) {
     const y = window.scrollY;
+    const dt = Math.min((t - lastT) / 1000 || 0, .1);
+    lastT = t;
     if (y !== lastY) {
       const vh = innerHeight;
       updateActive();
@@ -107,12 +112,16 @@
         if (active && active.dataset.pose !== 'hide') {
           const r = active.getBoundingClientRect();
           const prog = (r.top + r.height / 2 - vh / 2) / r.height;
-          stagePar.style.transform = `translate3d(0, ${(prog * (mqMobile.matches ? 30 : 70)).toFixed(1)}px, 0)`;
+          parTarget = prog * (mqMobile.matches ? 30 : 60);
         }
       }
       hdr.classList.toggle('is-scrolled', y > 40);
       hdr.classList.toggle('is-hidden', y > lastY && y > innerHeight * .9 && !$('.mnav.is-open'));
       lastY = y;
+    }
+    if (!reduce && Math.abs(parTarget - parY) > .05) {
+      parY += (parTarget - parY) * (1 - Math.exp(-dt * 3.2));
+      stagePar.style.transform = `translate3d(0, ${parY.toFixed(2)}px, 0)`;
     }
     requestAnimationFrame(frame);
   }
