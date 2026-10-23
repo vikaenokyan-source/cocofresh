@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>КОКОФРЕШ — ресторан и гастробар у м. Алексеевская</title>
+<meta name="description" content="КОКОФРЕШ — ресторан европейской кухни и гастробар при «1 АРТ ОТЕЛЬ» в Москве. Завтраки «шведский стол» с 7:30, меню à la carte, более 70 вин, банкеты и мероприятия до 100 гостей.">
+<meta name="theme-color" content="#F3ECDF">
+<meta property="og:title" content="КОКОФРЕШ — ресторан, гастробар, мероприятия">
+<meta property="og:description" content="Завтраки, ради которых стоит проснуться. Москва, Староалексеевская, 20.">
+<meta property="og:image" content="assets/photos/breakfast-table.jpg">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="cream">
+
+<!-- ============ ЗАГРУЗКА ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark"><span>К</span><span>О</span><span>К</span><span>О</span><span>Ф</span><span>Р</span><span>Е</span><span>Ш</span></div>
+  <div class="loader__line"><i></i></div>
+  <p class="loader__note">Накрываем на стол</p>
+</div>
+
+<!-- ============ ШАПКА ============ -->
+<header class="hdr" id="hdr">
+  <a class="hdr__logo" href="#top" aria-label="КОКОФРЕШ — наверх">КОКОФРЕШ</a>
+  <nav class="hdr__nav" aria-label="Основная навигация">
+    <a href="#menu">Меню</a>
+    <a href="#about">О нас</a>
+    <a href="#breakfast">Завтрак</a>
+    <a href="#wine">Винная карта</a>
+    <a href="#events">Мероприятия</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="hdr__right">
+    <a class="hdr__phone" href="tel:+79099495555">+7 909 949-55-55</a>
+    <button class="btn btn--sm" data-open="booking">Забронировать</button>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <nav>
+    <a href="#menu">Меню</a>
+    <a href="#about">О нас</a>
+    <a href="#breakfast">Завтрак</a>
+    <a href="#wine">Винная карта</a>
+    <a href="#events">Мероприятия</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <div class="mnav__foot">
+    <a href="tel:+79099495555">+7 909 949-55-55</a>
+    <button class="btn" data-open="booking">Забронировать столик</button>
+  </div>
+</div>
+
+<!-- ============ ИНДИКАТОР ШАГОВ ============ -->
+<ol class="steps" id="steps" aria-hidden="true"></ol>
+
+<!-- ============ СЦЕНА: ЗАВТРАК ============ -->
+<div class="stage" id="stage" aria-hidden="true">
+  <div class="stage__pose" id="stagePose">
+    <div class="stage__par" id="stagePar">
+<svg id="scene" viewBox="0 0 1000 1000" overflow="visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- градиенты -->
+    <radialGradient id="gPlate" cx="45%" cy="40%" r="62%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".72" stop-color="#F8F2E8"/><stop offset="1" stop-color="#E4D8C5"/></radialGradient>
+    <radialGradient id="gWell" r="50%"><stop offset=".8" stop-color="#6B4A30" stop-opacity="0"/><stop offset="1" stop-color="#6B4A30" stop-opacity=".12"/></radialGradient>
+    <radialGradient id="gToast" cx="46%" cy="42%" r="58%"><stop offset="0" stop-color="#F7D493"/><stop offset=".5" stop-color="#E5AA60"/><stop offset=".85" stop-color="#C67A35"/><stop offset="1" stop-color="#9A5323"/></radialGradient>
+    <linearGradient id="gSalmon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F9AE86"/><stop offset=".5" stop-color="#EE7448"/><stop offset="1" stop-color="#D4512D"/></linearGradient>
+    <linearGradient id="gAvo" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F1F2B8"/><stop offset=".5" stop-color="#C3CF66"/><stop offset=".85" stop-color="#7C9530"/><stop offset="1" stop-color="#425A18"/></linearGradient>
+    <radialGradient id="gEggW" cx="44%" cy="40%" r="60%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#FBF7F0"/><stop offset="1" stop-color="#E6DCCB"/></radialGradient>
+    <radialGradient id="gYolk" r="50%"><stop offset="0" stop-color="#FFC94E" stop-opacity=".75"/><stop offset="1" stop-color="#FFB84A" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gHoll" cx="40%" cy="34%" r="66%"><stop offset="0" stop-color="#FFF2B8"/><stop offset=".45" stop-color="#F6C858"/><stop offset="1" stop-color="#D6962B"/></radialGradient>
+    <radialGradient id="gCaviar" cx="34%" cy="32%" r="70%"><stop offset="0" stop-color="#FFB27C"/><stop offset=".5" stop-color="#EE5824"/><stop offset="1" stop-color="#A0220C"/></radialGradient>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B5D267"/><stop offset="1" stop-color="#6E9A34"/></linearGradient>
+    <linearGradient id="gLeaf2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A2C455"/><stop offset="1" stop-color="#5E8A2C"/></linearGradient>
+    <linearGradient id="gOlive" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A3AD78"/><stop offset="1" stop-color="#5F6A38"/></linearGradient>
+    <radialGradient id="gShell" cx="40%" cy="34%" r="66%"><stop offset="0" stop-color="#FCF3E6"/><stop offset=".6" stop-color="#ECD6B5"/><stop offset="1" stop-color="#C79E72"/></radialGradient>
+    <radialGradient id="gCup" cx="42%" cy="38%" r="64%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".75" stop-color="#F6F0E6"/><stop offset="1" stop-color="#E2D6C3"/></radialGradient>
+    <radialGradient id="gCoffee" r="50%"><stop offset="0" stop-color="#8E5A33"/><stop offset=".7" stop-color="#6A3B1F"/><stop offset="1" stop-color="#4A2612"/></radialGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8C6A35"/><stop offset=".45" stop-color="#E6CB92"/><stop offset="1" stop-color="#A47E43"/></linearGradient>
+    <linearGradient id="gNapkin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A2033"/><stop offset="1" stop-color="#4A0F1C"/></linearGradient>
+    <radialGradient id="gBean" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#9A643A"/><stop offset="1" stop-color="#3E2210"/></radialGradient>
+    <radialGradient id="gOil" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#B9C66A"/><stop offset="1" stop-color="#55632A"/></radialGradient>
+
+    <pattern id="pCrumb" width="26" height="26" patternUnits="userSpaceOnUse">
+      <ellipse cx="5" cy="6" rx="2.6" ry="1.8" fill="#8E4B1E" opacity=".55"/>
+      <ellipse cx="17" cy="4" rx="1.6" ry="1.2" fill="#FBE3B0" opacity=".7"/>
+      <ellipse cx="13" cy="15" rx="2.2" ry="1.5" fill="#8E4B1E" opacity=".4"/>
+      <ellipse cx="22" cy="20" rx="1.4" ry="1.1" fill="#FBE3B0" opacity=".6"/>
+      <ellipse cx="4" cy="21" rx="1.7" ry="1.3" fill="#9A5626" opacity=".5"/>
+    </pattern>
+    <pattern id="pLinen" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M0 0H6M0 3H6" stroke="#fff" stroke-opacity=".06" stroke-width="1"/>
+      <path d="M0 0V6M3 0V6" stroke="#000" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+
+    <filter id="fShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="12" dy="22" stdDeviation="16" flood-color="#2A0A10" flood-opacity=".26"/></filter>
+    <filter id="fShadowS" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#2A0A10" flood-opacity=".28"/></filter>
+    <filter id="fBlur8" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="fBlur4" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <clipPath id="clipTop" clipPathUnits="userSpaceOnUse"><path d="M-200,-260 L200,-260 L200,0 L90,0 L60,-10 L40,8 L20,-8 L0,10 L-20,-8 L-40,8 L-60,-10 L-90,0 L-200,0Z"/></clipPath>
+    <clipPath id="clipBot" clipPathUnits="userSpaceOnUse"><path d="M-200,260 L200,260 L200,0 L90,0 L60,-10 L40,8 L20,-8 L0,10 L-20,-8 L-40,8 L-60,-10 L-90,0 L-200,0Z"/></clipPath>
+
+    <!-- ===== Иллюстрации (заменяются PNG из assets/anim, если файл есть) ===== -->
+    <g id="art-plate" data-img="plate" data-box="-350 -350 700 700"><g class="illus">
+      <circle r="340" fill="url(#gPlate)"/>
+      <circle r="324" fill="none" stroke="#7A1E2C" stroke-width="2.5" opacity=".7"/>
+      <circle r="316" fill="none" stroke="#7A1E2C" stroke-width=".8" opacity=".45"/>
+      <circle r="258" fill="url(#gWell)"/>
+      <circle r="258" fill="none" stroke="#000" stroke-opacity=".045" stroke-width="3"/>
+      <ellipse cx="-120" cy="-175" rx="120" ry="36" transform="rotate(-35 -120 -175)" fill="#fff" opacity=".6" filter="url(#fBlur8)"/>
+    </g></g>
+
+    <g id="art-brioche" data-img="brioche-half" data-box="-128 -128 256 256"><g class="illus">
+      <circle r="122" fill="#7E411B"/>
+      <circle r="114" fill="#A65E28"/>
+      <circle r="106" fill="url(#gToast)"/>
+      <circle r="106" fill="url(#pCrumb)"/>
+      <ellipse cx="-30" cy="22" rx="38" ry="26" fill="#9A5422" opacity=".28" filter="url(#fBlur4)"/>
+      <ellipse cx="34" cy="-30" rx="30" ry="20" fill="#9A5422" opacity=".22" filter="url(#fBlur4)"/>
+      <ellipse cx="-24" cy="-40" rx="34" ry="16" fill="#FFF1C9" opacity=".35" filter="url(#fBlur4)"/>
+    </g></g>
+
+    <g id="art-salmon" data-img="salmon-rosette" data-box="-118 -118 236 236"><g class="illus">
+      <g id="salmonPetals">
+        <g><path d="M0,0 C18,-30 70,-50 98,-22 C108,-10 100,8 86,14 C60,26 22,22 0,0Z" fill="url(#gSalmon)" stroke="#B9452A" stroke-opacity=".25"/><path d="M14,-6 C38,-24 70,-30 92,-14" stroke="#FFEDE2" stroke-opacity=".75" stroke-width="2.4" fill="none"/><path d="M20,5 C44,-5 70,-7 90,1" stroke="#FFEDE2" stroke-opacity=".5" stroke-width="1.8" fill="none"/></g>
+      </g>
+      <use href="#salmonPetals" transform="rotate(51)"/>
+      <use href="#salmonPetals" transform="rotate(103)"/>
+      <use href="#salmonPetals" transform="rotate(154)"/>
+      <use href="#salmonPetals" transform="rotate(206)"/>
+      <use href="#salmonPetals" transform="rotate(257)"/>
+      <use href="#salmonPetals" transform="rotate(309)"/>
+      <use href="#salmonPetals" transform="rotate(25) scale(.62)"/>
+      <use href="#salmonPetals" transform="rotate(145) scale(.62)"/>
+      <use href="#salmonPetals" transform="rotate(265) scale(.62)"/>
+      <circle r="14" fill="#E2603A"/>
+    </g></g>
+
+    <g id="art-poached" data-img="egg-poached" data-box="-98 -98 196 196"><g class="illus">
+      <path d="M-82,-8 C-86,-60 -32,-94 14,-87 C66,-82 96,-40 90,6 C86,56 46,92 -6,88 C-56,84 -80,42 -82,-8Z" fill="url(#gEggW)" filter="url(#fShadowS)"/>
+      <path d="M-62,-30 C-50,-62 -10,-74 22,-68" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".8"/>
+      <circle cx="6" cy="6" r="44" fill="url(#gYolk)"/>
+    </g></g>
+
+    <g id="art-holl" data-img="egg-hollandaise" data-box="-98 -98 196 196"><g class="illus">
+      <path d="M-70,-20 C-72,-62 -20,-80 20,-74 C62,-68 82,-30 76,8 C74,26 70,40 62,48 C60,64 52,72 46,62 C42,52 38,50 28,56 C10,68 -10,66 -30,58 C-34,76 -42,82 -48,70 C-52,58 -56,50 -64,40 C-72,26 -72,0 -70,-20Z" fill="url(#gHoll)"/>
+      <ellipse class="holl-gloss" cx="-18" cy="-42" rx="22" ry="9" transform="rotate(-18 -18 -42)" fill="#fff" opacity=".75"/>
+      <ellipse class="holl-gloss" cx="30" cy="-20" rx="8" ry="4" fill="#fff" opacity=".55"/>
+      <circle cx="10" cy="10" r="2.2" fill="#C2361C"/><circle cx="-20" cy="18" r="1.8" fill="#C2361C"/><circle cx="36" cy="22" r="1.6" fill="#C2361C"/><circle cx="-6" cy="-12" r="1.4" fill="#C2361C"/>
+    </g></g>
+
+    <g id="art-sprig" data-img="microgreens" data-box="-42 -46 84 84"><g class="illus">
+      <path d="M0,30 C3,12 -3,0 0,-18" stroke="#7E9A45" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M0,-18 C-6,-34 -26,-40 -34,-30 C-28,-20 -12,-16 0,-18Z" fill="url(#gLeaf)"/>
+      <path d="M0,-18 C6,-36 28,-42 36,-31 C30,-20 12,-15 0,-18Z" fill="url(#gLeaf2)"/>
+      <path d="M0,-18 C-10,-26 -20,-30 -29,-30M0,-18 C10,-27 21,-32 31,-31" stroke="#fff" stroke-opacity=".35" stroke-width="1" fill="none"/>
+    </g></g>
+
+    <g id="bead"><circle r="6.6" fill="url(#gCaviar)"/><circle cx="-2" cy="-2.3" r="1.8" fill="#fff" opacity=".9"/></g>
+    <g id="art-caviar" data-img="caviar" data-box="-26 -26 52 52"><g class="illus">
+      <use href="#bead"/><use href="#bead" x="12" y="3"/><use href="#bead" x="-11" y="4"/><use href="#bead" x="4" y="-11"/><use href="#bead" x="-7" y="-11"/><use href="#bead" x="14" y="-9"/><use href="#bead" x="-3" y="12"/><use href="#bead" x="10" y="14"/><use href="#bead" x="-14" y="-3"/>
+    </g></g>
+
+    <g id="art-chive"><rect x="-1.6" y="-7" width="3.2" height="14" rx="1.6" fill="#5E8A2E"/></g>
+
+    <g id="art-egg" data-img="egg-whole" data-box="-72 -108 144 216"><g class="illus">
+      <ellipse rx="64" ry="82" fill="url(#gShell)"/>
+      <circle cx="-22" cy="20" r="2.2" fill="#A97B4E" opacity=".35"/><circle cx="18" cy="38" r="1.6" fill="#A97B4E" opacity=".35"/><circle cx="28" cy="-6" r="2" fill="#A97B4E" opacity=".3"/><circle cx="-8" cy="54" r="1.5" fill="#A97B4E" opacity=".35"/><circle cx="-34" cy="-14" r="1.4" fill="#A97B4E" opacity=".3"/>
+      <ellipse cx="-20" cy="-32" rx="15" ry="26" fill="#fff" opacity=".5"/>
+    </g></g>
+
+    <g id="art-bean" data-img="coffee-bean" data-box="-22 -22 44 44"><g class="illus">
+      <ellipse rx="13" ry="18" fill="url(#gBean)"/>
+      <path d="M0,-15 C-6,-6 6,6 0,15" stroke="#2A160B" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-5" cy="-7" rx="3" ry="6" fill="#fff" opacity=".18"/>
+    </g></g>
+  </defs>
+
+  <g id="all">
+    <!-- салфетка и приборы (финал) -->
+    <g id="napkinP"><g transform="translate(118 610) rotate(-6)" data-img="napkin" data-box="-145 -218 290 436"><g class="illus">
+      <rect x="-100" y="-210" width="200" height="420" rx="14" fill="url(#gNapkin)" filter="url(#fShadowS)"/>
+      <rect x="-100" y="-210" width="200" height="420" rx="14" fill="url(#pLinen)"/>
+      <rect x="-86" y="-196" width="172" height="392" rx="8" fill="none" stroke="#FFE1D7" stroke-opacity=".25" stroke-dasharray="2 5"/>
+      <rect x="-100" y="-12" width="200" height="24" fill="#000" opacity=".09"/>
+    </g></g></g>
+    <g id="cutleryP"><g transform="translate(116 610) rotate(-6)" data-img="cutlery" data-box="-168 -252 336 504"><g class="illus" filter="url(#fShadowS)">
+      <rect x="-37" y="-40" width="18" height="280" rx="9" fill="url(#gGold)"/>
+      <path d="M-42,-64 L-14,-64 L-19,-36 L-37,-36Z" fill="url(#gGold)"/>
+      <rect x="-45" y="-112" width="34" height="54" rx="9" fill="url(#gGold)"/>
+      <rect x="-45" y="-232" width="5.5" height="132" rx="2.7" fill="url(#gGold)"/><rect x="-35.5" y="-232" width="5.5" height="132" rx="2.7" fill="url(#gGold)"/><rect x="-26" y="-232" width="5.5" height="132" rx="2.7" fill="url(#gGold)"/><rect x="-16.5" y="-232" width="5.5" height="132" rx="2.7" fill="url(#gGold)"/>
+      <rect x="19" y="-24" width="18" height="264" rx="9" fill="url(#gGold)"/>
+      <path d="M21,-24 L21,-226 C21,-246 46,-246 46,-200 L41,-24Z" fill="url(#gGold)"/>
+    </g></g></g>
+
+    <!-- тарелка -->
+    <g id="plateG"><use href="#art-plate" transform="translate(500 500)" filter="url(#fShadow)"/></g>
+    <g id="oil"></g>
+
+    <!-- бриошь -->
+    <g id="briocheP"><g class="bob">
+      <g class="half"><use href="#art-brioche" transform="translate(395 445) rotate(-12)" filter="url(#fShadowS)"/></g>
+      <g class="half"><use href="#art-brioche" transform="translate(612 566) rotate(32)" filter="url(#fShadowS)"/></g>
+    </g></g>
+
+    <!-- лосось и авокадо -->
+    <g id="saladP"><g class="bob">
+      <g id="avocado" transform="translate(232 648) rotate(4)" data-img="avocado-fan" data-box="-30 -125 250 250"><g class="illus" filter="url(#fShadowS)">
+        <g class="avo-s"><g transform="rotate(-24)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+        <g class="avo-s"><g transform="translate(4 4) rotate(-12)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+        <g class="avo-s"><g transform="translate(8 8) rotate(0)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+        <g class="avo-s"><g transform="translate(12 12) rotate(12)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+        <g class="avo-s"><g transform="translate(16 16) rotate(24)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+        <g class="avo-s"><g transform="translate(20 20) rotate(36)"><path d="M0,0 C28,-26 104,-34 152,-12 C158,-6 158,6 150,10 C104,22 34,20 0,0Z" fill="url(#gAvo)"/><path d="M0,0 C28,-26 104,-34 152,-12" stroke="#36501A" stroke-width="5" fill="none" stroke-linecap="round"/></g></g>
+      </g></g>
+      <g class="salmon-r"><use href="#art-salmon" transform="translate(395 445) rotate(10)"/></g>
+      <g class="salmon-r"><use href="#art-salmon" transform="translate(612 566) rotate(-20)"/></g>
+    </g></g>
+
+    <!-- яйца пашот -->
+    <g class="poached"><g class="squash"><use href="#art-poached" transform="translate(398 436)"/></g></g>
+    <g class="poached"><g class="squash"><use href="#art-poached" transform="translate(612 554) rotate(40)"/></g></g>
+
+    <!-- голландез -->
+    <g class="holl" id="h1"><use href="#art-holl" transform="translate(398 432)"/></g>
+    <g class="holl" id="h2"><use href="#art-holl" transform="translate(612 550) rotate(-14)"/></g>
+
+    <!-- зелень, икра, шнитт-лук: собираются из «орбиты» на шаге 5 -->
+    <g id="garnish"></g>
+    <g id="pepper"></g>
+    <g id="sparkles"></g>
+
+    <!-- капучино -->
+    <g id="coffeeP"><g transform="translate(868 168)" data-img="cappuccino" data-box="-160 -160 320 320"><g class="illus">
+      <circle r="150" fill="url(#gCup)" filter="url(#fShadow)"/>
+      <circle r="114" fill="none" stroke="#000" stroke-opacity=".05" stroke-width="2"/>
+      <g transform="rotate(30)"><rect x="96" y="-16" width="62" height="32" rx="16" fill="url(#gCup)" stroke="#D9CCB8" stroke-width="1.5"/></g>
+      <g transform="translate(-104 66) rotate(42)"><ellipse rx="13" ry="19" fill="url(#gGold)"/><rect x="-3.5" y="16" width="7" height="72" rx="3.5" fill="url(#gGold)"/></g>
+      <circle r="108" fill="url(#gCup)" filter="url(#fShadowS)"/>
+      <circle r="100" fill="none" stroke="#EDE3D3" stroke-width="5"/>
+      <circle r="92" fill="url(#gCoffee)"/>
+      <circle r="86" fill="none" stroke="#C99360" stroke-width="12" opacity=".55"/>
+      <path id="latte" d="M0,50 C-62,10 -58,-44 -20,-44 C-5,-44 0,-30 0,-22 C0,-30 5,-44 20,-44 C58,-44 62,10 0,50Z M0,50 L0,70" fill="#F6EAD8" stroke="#F6EAD8" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    </g></g></g>
+    <g id="steam" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity=".0" filter="url(#fBlur4)">
+      <path class="steam" d="M844,120 C830,92 858,72 844,44 C830,16 858,-4 844,-32 C830,-60 858,-80 844,-108"/>
+      <path class="steam" d="M870,108 C856,80 884,60 870,32 C856,4 884,-16 870,-44 C856,-72 884,-92 870,-120"/>
+      <path class="steam" d="M896,120 C882,92 910,72 896,44 C882,16 910,-4 896,-32 C882,-60 910,-80 896,-108"/>
+    </g>
+
+    <!-- веточка оливы (финал) -->
+    <g id="sprigP"><g transform="translate(150 150) rotate(-18)" data-img="olive-branch" data-box="-15 -110 240 160"><g class="illus" filter="url(#fShadowS)">
+      <path d="M0,0 C40,-12 120,-30 200,-46" stroke="#5C6636" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <g fill="url(#gOlive)">
+        <path transform="translate(28 -6) rotate(-52)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(48 -12) rotate(38)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(80 -19) rotate(-56)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(100 -24) rotate(34)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(128 -30) rotate(-48)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(148 -34) rotate(30)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(176 -40) rotate(-30)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+        <path transform="translate(198 -46) rotate(-6)" d="M0,0 C10,-12 40,-14 54,-2 C40,6 12,8 0,0Z"/>
+      </g>
+      <ellipse cx="112" cy="-4" rx="11" ry="14" fill="#3B1A22"/><ellipse cx="108" cy="-8" rx="3" ry="4" fill="#fff" opacity=".3"/>
+      <ellipse cx="160" cy="-14" rx="10" ry="13" fill="#4A2230"/><ellipse cx="156" cy="-18" rx="3" ry="4" fill="#fff" opacity=".3"/>
+    </g></g></g>
+
+    <!-- кофейные зёрна на «орбите» -->
+    <g id="beans"></g>
+
+    <!-- целое фермерское яйцо -->
+    <g id="eggP"><g class="bob"><g transform="translate(500 230)">
+      <g id="eggBot" clip-path="url(#clipBot)"><use href="#art-egg" filter="url(#fShadowS)"/></g>
+      <g id="eggTop" clip-path="url(#clipTop)"><use href="#art-egg" filter="url(#fShadowS)"/></g>
+      <path id="crack" d="M-64,0 L-60,-10 L-40,8 L-20,-8 L0,10 L20,-8 L40,8 L60,-10 L64,0" fill="none" stroke="#6B4A2A" stroke-width="2.5" stroke-linejoin="round"/>
+    </g></g></g>
+
+    <!-- струи голландеза -->
+    <path id="str1" d="M398,-520 L398,418" stroke="#F2BE4C" stroke-width="13" stroke-linecap="round" fill="none"/>
+    <path id="str2" d="M612,-520 L612,536" stroke="#F2BE4C" stroke-width="13" stroke-linecap="round" fill="none"/>
+    <g id="crumbs"></g>
+  </g>
+</svg>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ 00 · HERO ============ -->
+<section class="hero" data-theme="cream" data-pose="hero" data-step="0" id="hero">
+  <div class="hero__mark" data-speed="0.25" aria-hidden="true">КОКОФРЕШ</div>
+  <div class="hero__top">
+    <p class="eyebrow">Москва · м. Алексеевская</p>
+    <p class="eyebrow hero__tag">Ресторан. Гастробар. Мероприятия.</p>
+  </div>
+  <div class="hero__bottom">
+    <div class="hero__copy">
+      <h1 class="h1">Завтрак, <em>ради которого</em> стоит проснуться</h1>
+      <p class="lead">Европейская кухня, фермерские продукты и уютная арт-атмосфера при «1&nbsp;АРТ&nbsp;ОТЕЛЬ».</p>
+    </div>
+    <div class="hero__cta">
+      <p class="hero__time"><span class="dot"></span>Завтракаем каждый день с 7:30</p>
+      <div class="btns">
+        <button class="btn" data-open="booking">Забронировать столик</button>
+        <button class="btn btn--ghost" data-open="menu">Смотреть меню</button>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about"><span>Листайте — мы начинаем готовить</span><i></i></a>
+</section>
+
+<!-- ============ 01 · О НАС — бриошь ============ -->
+<section class="scene-sec" id="about" data-theme="burgundy" data-pose="right" data-step="1">
+  <div class="giant giant--right" data-speed-x="-0.18" aria-hidden="true">бриошь</div>
+  <p class="step-cap step-cap--right">Шаг 01 / 07 — Бриошь, обжаренная на сливочном масле</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>01 — О нас</p>
+    <h2 class="h2" data-reveal>Европейская кухня <em>в&nbsp;арт-атмосфере</em></h2>
+    <p data-reveal>Ресторан европейской кухни и гастробар при бизнес-отеле «1&nbsp;АРТ&nbsp;ОТЕЛЬ» — в нескольких минутах ходьбы от метро «Алексеевская» и проспекта Мира.</p>
+    <p data-reveal>В «КОКОФРЕШ» отличные завтраки для всех желающих, уютная арт-атмосфера и современный дизайн. Здесь можно не только оценить нашу кухню и прекрасную винную карту, но и провести время за чашкой листового чая или продегустировать 8&nbsp;сортов лучшего кофе.</p>
+    <ul class="facts" data-reveal>
+      <li><b>80</b><span>мест в основном зале</span></li>
+      <li><b>100</b><span>гостей на банкетах и фуршетах</span></li>
+      <li><b>8</b><span>сортов лучшего кофе</span></li>
+      <li><b>70+</b><span>вин в винной карте</span></li>
+    </ul>
+    <ul class="ticks" data-reveal>
+      <li>Летняя веранда рядом с рестораном</li>
+      <li>Отдельный зал для детей</li>
+      <li>Подземная и открытая парковка для гостей</li>
+      <li>Постоянным гостям — баллы и специальные условия на мероприятия</li>
+    </ul>
+    <div class="photos">
+      <figure class="ph ph--a" data-speed="0.08"><img src="assets/photos/interior-booth.jpg" alt="Зал ресторана КОКОФРЕШ с бордовыми стенами и арт-постерами" loading="lazy"></figure>
+      <figure class="ph ph--b" data-speed="-0.06"><img src="assets/photos/interior-wide.jpg" alt="Интерьер ресторана: мягкий диван и бордовая стена" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · ЗАВТРАК — лосось и авокадо ============ -->
+<section class="scene-sec" id="breakfast" data-theme="sand" data-pose="left" data-step="2">
+  <div class="giant giant--left" data-speed-x="0.18" aria-hidden="true">лосось</div>
+  <p class="step-cap step-cap--left">Шаг 02 / 07 — Лосось слабой соли и авокадо</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>02 — Завтрак «Шведский стол»</p>
+    <h2 class="h2" data-reveal>Шведский стол, <em>который хочется повторять</em></h2>
+    <div class="hours" data-reveal>
+      <div><span>Будни</span><b>7:30 — 11:00</b></div>
+      <div><span>Выходные и праздники</span><b>8:00 — 12:00</b></div>
+    </div>
+    <p data-reveal>Приглашаем начать свой день в «КОКОФРЕШ»: в будни с 7:30, а в выходные с 8 утра ждём всех на сытный и разнообразный завтрак. Нежные сырники, блюда из яиц, каши, свежие фрукты и смузи, горячие тосты и пышные круассаны.</p>
+    <ul class="tags" data-reveal>
+      <li>Сырники</li><li>Омлет или яичница</li><li>Ароматные каши</li><li>Холодные и горячие закуски</li><li>Свежие фрукты и овощи</li><li>Смузи</li><li>Тосты</li><li>Круассаны</li><li>Бодрящий кофе или чай</li>
+    </ul>
+    <div class="btns" data-reveal><button class="btn" data-open="booking" data-preset="Завтрак">Забронировать завтрак</button></div>
+    <div class="photos">
+      <figure class="ph ph--a" data-speed="0.07"><img src="assets/photos/buffet-counter.jpg" alt="Шведский стол: фрукты, закуски, выпечка" loading="lazy"></figure>
+      <figure class="ph ph--b" data-speed="-0.05"><img src="assets/photos/breakfast-table.jpg" alt="Завтрак на столе: блины, круассаны, апельсиновый сок" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · ФЕРМА — яйцо пашот ============ -->
+<section class="scene-sec" id="farm" data-theme="khaki" data-pose="right" data-step="3">
+  <div class="giant giant--right" data-speed-x="-0.18" aria-hidden="true">пашот</div>
+  <p class="step-cap step-cap--right">Шаг 03 / 07 — Фермерское яйцо пашот</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>03 — Фермерские продукты</p>
+    <h2 class="h2" data-reveal>Свежие яйца <em>с&nbsp;лучших фермерских хозяйств</em></h2>
+    <p data-reveal>Для наших завтраков и фирменных блюд мы используем свежее куриное мясо и куриные яйца с лучших фермерских хозяйств. Такие блюда отмечены в меню значком <svg class="hen" aria-label="фермерское блюдо"><use href="#i-hen"/></svg>.</p>
+    <ul class="dishes" data-reveal>
+      <li><svg class="hen"><use href="#i-hen"/></svg><span>Куриная лапша из фермерской курицы</span><i></i><b>400 ₽</b></li>
+      <li><svg class="hen"><use href="#i-hen"/></svg><span>Жаркое из фермерской курочки с картофелем по-домашнему</span><i></i><b>900 ₽</b></li>
+      <li><svg class="hen"><use href="#i-hen"/></svg><span>Паста карбонара</span><i></i><b>750 ₽</b></li>
+    </ul>
+    <div class="photos">
+      <figure class="ph ph--a ph--wide" data-speed="0.06"><img src="assets/photos/breakfast-flatlay.jpg" alt="Завтрак сверху: яичница, сырники, блины, кофе" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · МЕНЮ — голландез ============ -->
+<section class="scene-sec" id="menu" data-theme="cream" data-pose="left" data-step="4">
+  <div class="giant giant--left" data-speed-x="0.18" aria-hidden="true">голландез</div>
+  <p class="step-cap step-cap--left">Шаг 04 / 07 — Соус голландез</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>04 — Меню à la carte</p>
+    <h2 class="h2" data-reveal>Днём — <em>меню à&nbsp;la&nbsp;carte</em></h2>
+    <p data-reveal>Днём ресторан работает по меню à la carte: фирменные блюда из отборной фермерской продукции. Каждый день — новый суп дня: борщ, мясная или рыбная солянка, грибной крем-суп, щи, балтийская уха. И наша фирменная куриная лапша.</p>
+    <p data-reveal>На горячее — жаркое из фермерской курицы с картофелем по-домашнему, сочные стейки на гриле и фирменный бургер, океаническая форель, домашняя паста и пицца.</p>
+    <ul class="dishes" data-reveal>
+      <li><span>Стейк из мраморной говядины</span><i></i><b>3300 ₽</b></li>
+      <li><span>Стейк из сёмги</span><i></i><b>1700 ₽</b></li>
+      <li><span>Бургер классика с фри</span><i></i><b>900 ₽</b></li>
+      <li><span>Дюжина царских пельменей ручной лепки</span><i></i><b>700 ₽</b></li>
+    </ul>
+    <div class="btns" data-reveal>
+      <button class="btn" data-open="menu" data-tab="kitchen">Открыть меню</button>
+      <span class="note">Навынос — скидка 20% на&nbsp;любое блюдо</span>
+    </div>
+    <div class="photos">
+      <figure class="ph ph--a" data-speed="0.07"><img src="assets/photos/breakfast-served.jpg" alt="Сервированный завтрак в ресторане" loading="lazy"></figure>
+      <figure class="ph ph--b" data-speed="-0.05"><img src="assets/photos/pancakes.jpg" alt="Блины с красной икрой" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · ВИНО — зелень и икра ============ -->
+<section class="scene-sec" id="wine" data-theme="wine" data-pose="right" data-step="5">
+  <div class="giant giant--right" data-speed-x="-0.18" aria-hidden="true">икра</div>
+  <p class="step-cap step-cap--right">Шаг 05 / 07 — Микрозелень и красная икра</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>05 — Ценителям вина</p>
+    <h2 class="h2" data-reveal>Более 70 вин — <em>от&nbsp;разлива до&nbsp;гран&nbsp;крю</em></h2>
+    <p data-reveal>Уникальная ценовая линейка: от вина в разлив по себестоимости до коллекционных гран крю лучших урожаев. По бокалам наливаем сладковатый ароматный пино нуар, тосканский кьянти и освежающее цитрусово-фруктовое итальянское просекко.</p>
+    <p data-reveal>В барной карте — многообещающая подборка виски, армянского и французского коньяка, европейских ликёров и классических коктейлей на основе апероля, текилы и рома. Бар работает до последнего гостя.</p>
+    <div class="btns" data-reveal>
+      <button class="btn" data-open="menu" data-tab="wine">Винная карта</button>
+      <button class="btn btn--ghost" data-open="menu" data-tab="bar">Барная карта</button>
+    </div>
+    <div class="photos">
+      <figure class="ph ph--a ph--wide" data-speed="0.06"><img src="assets/photos/wine.jpg" alt="Бокалы красного и белого вина" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · КОФЕ — капучино ============ -->
+<section class="scene-sec" id="coffee" data-theme="sand" data-pose="left" data-step="6">
+  <div class="giant giant--left" data-speed-x="0.18" aria-hidden="true">капучино</div>
+  <p class="step-cap step-cap--left">Шаг 06 / 07 — Капучино с латте-артом</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>06 — Кофе и чай</p>
+    <h2 class="h2" data-reveal>8 сортов кофе <em>и&nbsp;листовой чай</em></h2>
+    <p data-reveal>Продегустируйте 8 сортов лучшего кофе или задержитесь за чайником листового чая. Для прохладного утра — авторские чаи: имбирный с яблоком и облепиховый с апельсином.</p>
+    <ul class="dishes" data-reveal>
+      <li><span>Капучино, 200 / 300 мл</span><i></i><b>350 / 400 ₽</b></li>
+      <li><span>Флэт уайт</span><i></i><b>400 ₽</b></li>
+      <li><span>Раф</span><i></i><b>400 ₽</b></li>
+      <li><span>Авторский чай, 500 мл</span><i></i><b>750 ₽</b></li>
+      <li><span>Горячий шоколад с апельсином</span><i></i><b>300 ₽</b></li>
+    </ul>
+    <p class="note" data-reveal>Растительное молоко — +150 ₽</p>
+    <div class="photos">
+      <figure class="ph ph--a" data-speed="0.07"><img src="assets/photos/breakfast-bed.jpg" alt="Завтрак в номер: омлет, латте и сок на подносе" loading="lazy"></figure>
+      <figure class="ph ph--b" data-speed="-0.05"><img src="assets/photos/breakfast-served-2.jpg" alt="Завтрак с капучино и сырниками" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · МЕРОПРИЯТИЯ — подано ============ -->
+<section class="scene-sec" id="events" data-theme="khaki" data-pose="right" data-step="7">
+  <div class="giant giant--right" data-speed-x="-0.18" aria-hidden="true">подано</div>
+  <p class="step-cap step-cap--right">Шаг 07 / 07 — Подано. Приятного аппетита!</p>
+  <div class="scene-sec__content">
+    <p class="eyebrow" data-reveal>07 — Мероприятия</p>
+    <h2 class="h2" data-reveal>Праздник у&nbsp;нас — <em>завтрак в&nbsp;номер</em></h2>
+    <p data-reveal>Мы учтём все ваши пожелания и устроим запоминающееся мероприятие. А после праздника можно остаться в отеле: завтрак в нужное вам время мы доставим прямо в номер.</p>
+    <p data-reveal>На первом этаже отеля можно не только позавтракать, пообедать или поужинать, но и отметить свадьбу или день рождения. У нас есть всё для конференций, семинаров, тимбилдингов и банкетов.</p>
+    <ul class="ticks" data-reveal>
+      <li>Фуршеты и банкеты до 100 гостей</li>
+      <li>Два конференц-зала и две переговорные</li>
+      <li>Звуковое, световое и видеооборудование</li>
+      <li>Свадьбы, дни рождения, деловые встречи</li>
+    </ul>
+    <div class="btns" data-reveal>
+      <button class="btn" data-open="event">Запрос на мероприятие</button>
+    </div>
+    <div class="badge" data-speed="-0.1" aria-label="Скидка 20% в день рождения">
+      <svg viewBox="0 0 200 200"><defs><path id="badgeCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#badgeCircle">в день рождения · в день рождения · </textPath></text></svg>
+      <b>−20%</b>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ГАЛЕРЕЯ ============ -->
+<section class="solid gallery" id="gallery" data-theme="cream" data-pose="hide">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal>Галерея</p>
+      <h2 class="h2" data-reveal>Загляните <em>к&nbsp;нам в&nbsp;гости</em></h2>
+    </div>
+    <div class="gal">
+      <div class="gal__col" data-speed="0.05">
+        <button class="gal__item" data-full="assets/photos/interior-wide.jpg"><img src="assets/photos/interior-wide.jpg" alt="Зал ресторана с бордовой стеной" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/buffet-snacks.jpg"><img src="assets/photos/buffet-snacks.jpg" alt="Закуски на шведском столе" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/breakfast-bed.jpg"><img src="assets/photos/breakfast-bed.jpg" alt="Завтрак на подносе" loading="lazy"></button>
+      </div>
+      <div class="gal__col" data-speed="-0.06">
+        <button class="gal__item gal__item--tall" data-full="assets/photos/interior-booth.jpg"><img src="assets/photos/interior-booth.jpg" alt="Бордовые стены и арт-постеры" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/breakfast-flatlay.jpg"><img src="assets/photos/breakfast-flatlay.jpg" alt="Завтрак сверху" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/wine.jpg"><img src="assets/photos/wine.jpg" alt="Бокалы вина" loading="lazy"></button>
+      </div>
+      <div class="gal__col" data-speed="0.09">
+        <button class="gal__item" data-full="assets/photos/buffet-fruits.jpg"><img src="assets/photos/buffet-fruits.jpg" alt="Шведский стол с фруктами" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/breakfast-table.jpg"><img src="assets/photos/breakfast-table.jpg" alt="Завтрак: блины, круассаны, сок" loading="lazy"></button>
+        <button class="gal__item" data-full="assets/photos/interior-hall.jpg"><img src="assets/photos/interior-hall.jpg" alt="Зал ресторана" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ДОСТАВКА ============ -->
+<section class="solid delivery" id="delivery" data-theme="sand" data-pose="hide">
+  <div class="wrap delivery__in">
+    <div>
+      <p class="eyebrow" data-reveal>Доставка</p>
+      <h2 class="h2" data-reveal>Закажите домой <em>через партнёров</em></h2>
+      <p class="lead" data-reveal>А при заказе любого блюда навынос в ресторане — скидка 20%.</p>
+    </div>
+    <div class="partners" data-reveal>
+      <a class="partner partner--ya" href="https://eda.yandex.ru/r/kokofres?placeSlug=kokofresh" target="_blank" rel="noopener"><img src="assets/brand/yandex-eda.png" alt="Яндекс Еда"><span>Заказать →</span></a>
+      <a class="partner partner--dc" href="https://www.delivery-club.ru/srv/kokofrjesh_moskva" target="_blank" rel="noopener"><img src="assets/brand/delivery-club.png" alt="Delivery Club"><span>Заказать →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КОНТАКТЫ ============ -->
+<section class="solid contacts" id="contacts" data-theme="burgundy" data-pose="hide">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal>Контакты</p>
+      <h2 class="h2" data-reveal>Ждём вас <em>на&nbsp;Староалексеевской</em></h2>
+    </div>
+    <div class="contacts__grid">
+      <div class="contacts__info" data-reveal>
+        <div class="cblock">
+          <span class="eyebrow">Адрес</span>
+          <p class="big">Москва, ул. Староалексеевская, 20</p>
+          <p class="muted">Первый этаж «1 АРТ ОТЕЛЬ» · 5 минут от м. Алексеевская</p>
+          <a class="link" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%2020" target="_blank" rel="noopener">Построить маршрут →</a>
+        </div>
+        <div class="cblock">
+          <span class="eyebrow">Связаться</span>
+          <p class="big"><a href="tel:+79099495555">+7 909 949-55-55</a></p>
+          <div class="chips">
+            <a href="tel:+79099495555">Телефон</a>
+            <a href="https://max.ru/u/f9LHodD0cOJxivxmv6N0Yl_kqP5YBM3EHbrzAFmki4LO5C3UrSVoPuAaBg8" target="_blank" rel="noopener">MAX</a>
+            <a href="https://wa.me/79099495555" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:ok@cocofresh.ru">ok@cocofresh.ru</a>
+          </div>
+        </div>
+        <div class="cblock cblock--hours">
+          <span class="eyebrow">Время работы</span>
+          <dl>
+            <dt>Кухня, будни</dt><dd>7:30 — 22:45</dd>
+            <dt>Кухня, выходные и праздники</dt><dd>8:00 — 22:45</dd>
+            <dt>Бар</dt><dd>10:00 — 00:00</dd>
+            <dt>Завтрак «Шведский стол», будни</dt><dd>7:30 — 11:00</dd>
+            <dt>Завтрак, выходные и праздники</dt><dd>8:00 — 12:00</dd>
+          </dl>
+        </div>
+        <div class="btns"><button class="btn" data-open="booking">Забронировать столик</button></div>
+      </div>
+      <div class="contacts__map" data-reveal>
+        <iframe title="КОКОФРЕШ на карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A1%D1%82%D0%B0%D1%80%D0%BE%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2020&amp;z=16" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="solid foot" data-theme="wine" data-pose="hide">
+  <div class="wrap">
+    <div class="foot__mark" aria-hidden="true">КОКОФРЕШ</div>
+    <div class="foot__row">
+      <p>Ресторан · Гастробар · Мероприятия<br>Москва, Староалексеевская, 20</p>
+      <nav><a href="#menu">Меню</a><a href="#breakfast">Завтрак</a><a href="#wine">Винная карта</a><a href="#events">Мероприятия</a><a href="#contacts">Контакты</a></nav>
+      <p><a href="tel:+79099495555">+7 909 949-55-55</a><br><a href="mailto:ok@cocofresh.ru">ok@cocofresh.ru</a></p>
+    </div>
+    <p class="foot__legal">© КОКОФРЕШ. Чрезмерное употребление алкоголя вредит вашему здоровью. Алкоголь продаётся лицам старше 18 лет. Информация на сайте не является публичной офертой.</p>
+  </div>
+</footer>
+
+<!-- ============ МОДАЛЬНЫЕ ОКНА ============ -->
+<div class="modal" id="m-booking" role="dialog" aria-modal="true" aria-labelledby="bk-title">
+  <div class="modal__panel" data-lenis-prevent>
+    <button class="modal__x" data-close aria-label="Закрыть">×</button>
+    <p class="eyebrow">Бронирование</p>
+    <h3 class="h3" id="bk-title">Забронировать <em>столик</em></h3>
+    <form class="form" id="f-booking">
+      <label><span>Имя</span><input name="name" required autocomplete="name"></label>
+      <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+7"></label>
+      <label><span>Дата</span><input name="date" type="date" required></label>
+      <label><span>Время</span><input name="time" type="time" required></label>
+      <label><span>Гостей</span><input name="guests" type="number" min="1" max="100" value="2"></label>
+      <label><span>Повод</span><select name="kind"><option>Обед или ужин</option><option>Завтрак</option><option>День рождения (−20%)</option><option>Деловая встреча</option></select></label>
+      <label class="full"><span>Комментарий</span><textarea name="comment" rows="2" placeholder="Пожелания по столу, детский стул…"></textarea></label>
+      <div class="full form__foot">
+        <button class="btn" type="submit">Отправить в WhatsApp</button>
+        <p class="muted">или позвоните: <a href="tel:+79099495555">+7 909 949-55-55</a> · <a href="https://max.ru/u/f9LHodD0cOJxivxmv6N0Yl_kqP5YBM3EHbrzAFmki4LO5C3UrSVoPuAaBg8" target="_blank" rel="noopener">MAX</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="m-event" role="dialog" aria-modal="true" aria-labelledby="ev-title">
+  <div class="modal__panel" data-lenis-prevent>
+    <button class="modal__x" data-close aria-label="Закрыть">×</button>
+    <p class="eyebrow">Мероприятия</p>
+    <h3 class="h3" id="ev-title">Запрос <em>на мероприятие</em></h3>
+    <form class="form" id="f-event">
+      <label><span>Имя</span><input name="name" required autocomplete="name"></label>
+      <label><span>Телефон</span><input name="phone" type="tel" required autocomplete="tel" placeholder="+7"></label>
+      <label><span>Формат</span><select name="kind"><option>День рождения (−20%)</option><option>Свадьба</option><option>Банкет</option><option>Фуршет</option><option>Конференция / семинар</option><option>Тимбилдинг</option><option>Другое</option></select></label>
+      <label><span>Дата</span><input name="date" type="date"></label>
+      <label><span>Гостей</span><input name="guests" type="number" min="1" max="100" value="20"></label>
+      <label><span>Нужен номер в отеле?</span><select name="room"><option>Нет</option><option>Да, с завтраком в номер</option></select></label>
+      <label class="full"><span>Комментарий</span><textarea name="comment" rows="3" placeholder="Расскажите о мероприятии"></textarea></label>
+      <div class="full form__foot">
+        <button class="btn" type="submit">Отправить в WhatsApp</button>
+        <button class="btn btn--ghost" type="button" id="ev-mail">Отправить на почту</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal modal--menu" id="m-menu" role="dialog" aria-modal="true" aria-labelledby="mn-title">
+  <div class="modal__panel" data-lenis-prevent>
+    <button class="modal__x" data-close aria-label="Закрыть">×</button>
+    <div class="menu-head">
+      <h3 class="h3" id="mn-title">Меню <em>КОКОФРЕШ</em></h3>
+      <div class="tabs" role="tablist">
+        <button role="tab" data-tab="kitchen">Кухня</button>
+        <button role="tab" data-tab="bar">Бар и напитки</button>
+        <button role="tab" data-tab="wine">Вино и крепкое</button>
+      </div>
+    </div>
+    <div class="menu-body" id="menuBody"></div>
+    <div class="menu-notes">
+      <p><svg class="hen"><use href="#i-hen"/></svg> — фирменные блюда из отборной фермерской продукции. В приготовлении этих блюд и наших завтраков мы используем свежее куриное мясо и яйца с лучших фермерских хозяйств.</p>
+      <p>Заказ по меню — с 11:00 до 22:45, последний заказ в 22:45. Бар работает до 00:00. Обязательное условие нахождения в ресторане — заказ по меню.</p>
+      <p>У нас не курят, в том числе электронные сигареты и вейпы. Если у вас аллергия на какой-либо продукт, сообщите, пожалуйста, при приёме заказа. К сожалению, мы не можем принимать гостей с животными.</p>
+      <p class="accent">При заказе любого блюда навынос — скидка 20%</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--age" id="m-age" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="modal__panel">
+    <p class="eyebrow">Проверка возраста</p>
+    <h3 class="h3" id="age-title">Вам уже <em>есть 18?</em></h3>
+    <p>Чтобы открыть винную и барную карту, подтвердите, что вам исполнилось 18 лет.</p>
+    <div class="btns">
+      <button class="btn" id="age-yes">Да, мне больше 18</button>
+      <button class="btn btn--ghost" id="age-no">Нет, мне меньше 18</button>
+    </div>
+    <p class="muted age-deny" hidden>К сожалению, мы не можем показать этот раздел из-за возрастных ограничений.</p>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox"><button class="modal__x" data-close aria-label="Закрыть">×</button><img alt=""></div>
+
+<!-- иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-hen" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 3.2c.9-.9 2.3-.6 2.7.5.6-.6 1.7-.4 1.9.5.2.6 0 1.1-.4 1.5l.6.5c.6.5.6 1.4.1 2l-.3.3 4.3 3.2 3-2.3c.6-.4 1.4 0 1.3.7-.3 3.7-2.4 7-6 8.4l.8 2.3h1.2a.6.6 0 0 1 0 1.2h-5.2a.6.6 0 0 1 0-1.2h1.4l-.8-2.1c-3.6.6-7.2-1.4-8.4-5-.6-1.8-.3-3.7.6-5.2L4 7.3a.6.6 0 0 1 .2-1l2.1-.7c.1-.9.5-1.7 1.2-2.4Zm1 3.6a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8Z"/></symbol>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
