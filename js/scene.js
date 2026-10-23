@@ -42,25 +42,37 @@ window.Scene = (() => {
     return n;
   }
 
-  /* ---------- PNG вместо иллюстраций ----------
-     Положите файл в assets/anim/<имя>.png и добавьте имя в список ниже —
-     иллюстрация автоматически заменится картинкой. Имена — см. README. */
-  const ANIM_IMAGES = [];
+  /* ---------- Фото-слои вместо иллюстраций ----------
+     Картинки лежат в assets/anim/<имя>.webp (оригиналы PNG — в assets/anim/originals).
+     Имя из списка заменяет иллюстрацию с тем же data-img; убрать имя — вернуть иллюстрацию. */
+  const ANIM_IMAGES = [
+    'plate', 'brioche-half', 'salmon-rosette', 'avocado-fan', 'egg-poached', 'egg-hollandaise',
+    'microgreens', 'caviar', 'egg-whole', 'coffee-bean', 'cappuccino', 'napkin', 'cutlery', 'olive-branch',
+  ];
+  // тень для слоёв, у которых её не даёт родительский <use>
+  const IMG_SHADOW = {
+    'salmon-rosette': 'fShadowS', 'avocado-fan': 'fShadowS', 'egg-poached': 'fShadowS',
+    cappuccino: 'fShadow', napkin: 'fShadowS', cutlery: 'fShadowS', 'olive-branch': 'fShadowS',
+  };
 
   function swapImages() {
-    $$('[data-img]').forEach(g => {
-      if (!ANIM_IMAGES.includes(g.dataset.img)) return;
-      const src = `assets/anim/${g.dataset.img}.png`;
+    const jobs = $$('[data-img]').filter(g => ANIM_IMAGES.includes(g.dataset.img)).map(g => new Promise(done => {
+      const src = `assets/anim/${g.dataset.img}.webp`;
       const img = new Image();
       img.onload = () => {
         const [x, y, w, h] = g.dataset.box.split(' ').map(Number);
-        el('image', { href: src, x, y, width: w, height: h, preserveAspectRatio: 'xMidYMid meet' }, g);
+        const attrs = { href: src, x, y, width: w, height: h, preserveAspectRatio: 'xMidYMid meet' };
+        if (IMG_SHADOW[g.dataset.img]) attrs.filter = `url(#${IMG_SHADOW[g.dataset.img]})`;
+        el('image', attrs, g);
         const il = g.querySelector(':scope > .illus');
         if (il) il.style.display = 'none';
         g.classList.add('has-img');
+        done();
       };
+      img.onerror = done; // нет файла — остаётся иллюстрация
       img.src = src;
-    });
+    }));
+    return Promise.all(jobs);
   }
 
   /* ---------- построение динамических элементов ---------- */
@@ -297,14 +309,16 @@ window.Scene = (() => {
     run();
   }
 
+  let imagesReady = Promise.resolve();
   function init() {
     build();
     setInitial();
-    swapImages();
+    imagesReady = swapImages();
   }
 
   return {
     init, goTo, LABELS,
+    get imagesReady() { return imagesReady; },
     get played() { return played; },
     set onStep(fn) { onStep = fn; },
   };

@@ -143,8 +143,8 @@
   }
   const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
   Promise.race([
-    Promise.all([fontsReady, new Promise(r => setTimeout(r, 900))]),
-    new Promise(r => setTimeout(r, 3000)),
+    Promise.all([fontsReady, hasGsap ? Scene.imagesReady : null, new Promise(r => setTimeout(r, 900))]),
+    new Promise(r => setTimeout(r, 4000)),
   ]).then(start);
 
   /* ---------- якоря ---------- */

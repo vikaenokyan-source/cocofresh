@@ -26,7 +26,7 @@ js/scene.js         шаги анимации (GSAP)
 js/app.js           скролл (Lenis), параллакс, темы, модальные окна, формы
 js/menu-data.js     меню, бар и винная карта
 assets/photos/      фото ресторана с cocofresh.ru
-assets/anim/        сюда кладутся сгенерированные PNG для сцены
+assets/anim/        фото-слои сцены (WebP), исходники — в originals/
 assets/brand/       логотипы партнёров доставки, favicon
 ```
 
@@ -38,22 +38,24 @@ python3 -m http.server 5173
 
 Затем откройте http://localhost:5173
 
-## Как заменить иллюстрации на сгенерированные картинки
+## Фото-слои сцены
 
-Сейчас сцена нарисована векторными иллюстрациями, поэтому всё работает и без картинок. Чтобы сделать её фотореалистичной:
+Сцена собрана из 14 сгенерированных картинок с прозрачным фоном. Для сайта они сжаты в WebP и лежат в `assets/anim/*.webp` (около 0,7 МБ на все). Исходные PNG лежат в `assets/anim/originals/` и в репозиторий не попадают.
 
-1. Сгенерируйте PNG **с прозрачным фоном** по промптам ниже.
-2. Положите файлы в `assets/anim/` с точными именами из таблицы.
-3. Добавьте имена файлов (без `.png`) в список `ANIM_IMAGES` в начале `js/scene.js`, например:
-   `const ANIM_IMAGES = ['plate', 'brioche-half', 'egg-poached'];`
+Как заменить или добавить картинку:
 
-Каждая картинка встанет на место своей иллюстрации и будет анимироваться так же. Можно заменять по одной.
+1. Положите новый PNG в `assets/anim/originals/` с тем же именем.
+2. Пережмите его в WebP, например:
+   `cwebp -q 86 -alpha_q 100 -m 6 -resize 512 0 assets/anim/originals/brioche-half.png -o assets/anim/brioche-half.webp`
+3. Список подключённых слоёв задаётся в `ANIM_IMAGES` в начале `js/scene.js`. Если убрать имя из списка, на его место вернётся векторная иллюстрация.
+
+Размер и положение слоя задаются атрибутом `data-box` в `index.html`.
 
 ### Общий стиль (добавляйте в конец КАЖДОГО промпта)
 
 > Photorealistic high-end food photography for a Michelin-star restaurant. Strict top-down overhead flat-lay view, camera exactly 90° above the object. Soft diffused natural daylight from the upper left, gentle highlights. Single isolated object, centered, on a fully transparent background (PNG with alpha channel). No table, no surface, no cast shadow, no text, no watermark. Crisp detail, appetizing, warm natural colors.
 
-### Промпты
+### Промпты, по которым сделаны картинки
 
 | Файл | Формат | Промпт |
 |---|---|---|
